@@ -1,0 +1,15 @@
+def find_frequency(input_list):
+    frequency = {}
+    for num in input_list:
+        if num in frequency:
+            frequency[num] += 1
+        else:
+            frequency[num] = 1
+    return frequency
+
+input_list = [1, 2, 2, 3, 4, 4, 5, 5, 5]
+frequency = find_frequency(input_list)
+
+print("Frequency of numbers in the list:")
+for num, freq in frequency.items():
+    print(f"Number {num}: {freq} times")
