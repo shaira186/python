@@ -1,0 +1,8 @@
+
+def add_tuple_to_list(tuple_data, list_data):
+    list_data.extend(tuple_data)
+    return list_data
+tuple_data = (6, 7, 8, 9, 10)
+list_data = [1, 2, 3, 4, 5]
+result_list = add_tuple_to_list(tuple_data, list_data)
+print("Updated List:", result_list)
