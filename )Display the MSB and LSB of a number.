@@ -1,0 +1,14 @@
+def display_MSB_LSB(number):
+    binary_number = bin(number)
+    
+    MSB = binary_number[2]
+    
+    LSB = binary_number[-1]
+    
+    return MSB, LSB
+
+
+number = int(input("Enter a number: "))
+MSB, LSB = display_MSB_LSB(number)
+print("MSB:", MSB)
+print("LSB:", LSB)
