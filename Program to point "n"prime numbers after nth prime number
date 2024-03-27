@@ -1,0 +1,33 @@
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def nth_prime(n):
+    count = 0
+    num = 2
+    while True:
+        if is_prime(num):
+            count += 1
+            if count == n:
+                return num
+        num += 1
+
+def primes_after_nth(n, count):
+    nth = nth_prime(n)
+    primes = []
+    num = nth + 1
+    while len(primes) < count:
+        if is_prime(num):
+            primes.append(num)
+        num += 1
+    return primes
+
+n = 3  # Find prime numbers after the 3rd prime number
+count = 5  # Number of prime numbers to find after the 3rd prime number
+
+primes = primes_after_nth(n, count)
+print(f"The {count} prime numbers after the {n}th prime number are:", primes)
