@@ -1,0 +1,7 @@
+
+def tuple_to_list(tuple_data):
+    return list(tuple_data)
+
+tuple_data = (1, 2, 3, 4, 5)
+list_data = tuple_to_list(tuple_data)
+print("Converted List:", list_data)
