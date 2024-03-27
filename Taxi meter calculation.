@@ -1,0 +1,13 @@
+def taxi_fare(distance, waiting_time, initial_fare=3.0, fare_per_km=2.0, waiting_charge_per_minute=0.2):
+  
+    distance_fare = distance * fare_per_km
+    
+    waiting_time_fare = waiting_time * waiting_charge_per_minute
+    
+    total_fare = initial_fare + distance_fare + waiting_time_fare
+    
+    return total_fare
+distance = float(input("Enter distance traveled (in kilometers): "))
+waiting_time = float(input("Enter waiting time (in minutes): "))
+fare = taxi_fare(distance, waiting_time)
+print("Total fare:", fare)
