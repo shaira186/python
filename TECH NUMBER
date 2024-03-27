@@ -1,0 +1,20 @@
+def is_tech_number(num):
+    num_str = str(num)
+    product = 1
+    summation = 0
+    
+    for digit in num_str:
+        digit_int = int(digit)
+        product *= digit_int
+        summation += digit_int
+    
+    if product * summation == num:
+        return True
+    else:
+        return False
+
+number = int(input("Enter a number to check if it's a Tech number: "))
+if is_tech_number(number):
+    print(number, "is a Tech number.")
+else:
+    print(number, "is not a Tech number.")
