@@ -1,0 +1,26 @@
+def sum_of_elements(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0]) if rows > 0 else 0
+    
+    row_sums = [sum(row) for row in matrix]
+    
+
+    col_sums = [sum(matrix[i][j] for i in range(rows)) for j in range(cols)]
+  
+    diagonal_sum = sum(matrix[i][i] for i in range(min(rows, cols)))
+    
+    secondary_diagonal_sum = sum(matrix[i][cols - i - 1] for i in range(rows)) if rows == cols else None
+    
+    return row_sums, col_sums, diagonal_sum, secondary_diagonal_sum
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+row_sums, col_sums, diagonal_sum, secondary_diagonal_sum = sum_of_elements(matrix)
+
+print("Sum of elements in each row:", row_sums)
+print("Sum of elements in each column:", col_sums)
+print("Sum of elements in the main diagonal:", diagonal_sum)
+print("Sum of elements in the secondary diagonal:", secondary_diagonal_sum)
