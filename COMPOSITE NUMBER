@@ -1,0 +1,12 @@
+def is_composite(number):
+    if number < 4:
+        return False  # 1, 2, and 3 are not composite numbers
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return True
+    return False
+num = 9
+if is_composite(num):
+    print(num, "is a composite number.")
+else:
+    print(num, "is not a composite number.")
