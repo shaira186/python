@@ -1,0 +1,12 @@
+
+def char_to_ascii(char):
+    return ord(char)
+
+def ascii_to_char(ascii_value):
+    return chr(ascii_value)
+
+character = input("Enter a character: ")
+print("ASCII value:", char_to_ascii(character))
+
+ascii_value = int(input("Enter an ASCII value: "))
+print("Character:", ascii_to_char(ascii_value))
