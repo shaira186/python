@@ -1,0 +1,12 @@
+
+my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 2}
+
+
+number_to_find = 2
+
+indices = []
+for key, value in my_dict.items():
+    if value == number_to_find:
+        indices.append(key)
+
+print("Indices of number", number_to_find, ":", indices)
