@@ -1,0 +1,7 @@
+
+s = "PYTHON CODE"
+words = s.split()
+first_letters = [word[0] for word in words]
+
+result = ''.join(first_letters)
+print(result)
