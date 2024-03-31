@@ -1,0 +1,20 @@
+def calculate_tax(income):
+    if income <= 150000:
+        tax = 0
+    elif 150001 <= income <= 300000:
+        tax = (income - 150000) * 0.1
+    elif 300001 <= income <= 500000:
+        tax = 15000 + (income - 300000) * 0.2
+    else:
+        tax = 35000 + (income - 500000) * 0.3
+    return tax
+
+def main():
+    income = float(input("Enter the income: "))
+
+    tax = calculate_tax(income)
+
+    print(f"Tax to be paid: {tax:.2f}")
+
+if __name__ == "__main__":
+    main()
