@@ -1,0 +1,11 @@
+def calculate_average(numbers):
+    total = sum(numbers)
+    count = len(numbers)
+    if count == 0:
+        return 0  # Handle the case where the list is empty
+    else:
+        return total / count
+
+numbers = [5, 10, 15, 20]
+average = calculate_average(numbers)
+print("Average:", average)
