@@ -1,0 +1,11 @@
+import random
+
+def shuffle_list(lst):
+    shuffled = lst[:]  # Create a copy of the list to avoid modifying the original list
+    random.shuffle(shuffled)
+    return shuffled
+
+original_list = [1, 2, 3, 4, 5]
+shuffled_list = shuffle_list(original_list)
+print("Original list:", original_list)
+print("Shuffled list:", shuffled_list)
