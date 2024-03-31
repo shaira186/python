@@ -1,0 +1,7 @@
+
+my_list = [5, 2, 8, 1, 9]
+
+sorted_list = sorted(my_list)
+
+print("Original list:", my_list)
+print("List in ascending order:", sorted_list)
