@@ -1,0 +1,25 @@
+def calculate_total(denominations, notes):
+    total = 0
+    for i in range(len(denominations)):
+        total += denominations[i] * notes[i]
+    return total
+
+def main():
+    denominations = [2000, 500, 200, 100]
+    priority = input("Enter denomination priority (e.g., '2000 500 200 100'): ").split()
+    priority = list(map(int, priority))
+
+   
+    if sorted(priority) != sorted(denominations):
+        print("Invalid priority. Please provide all denominations.")
+        return
+
+    notes = []
+    for denomination in denominations:
+        notes.append(int(input(f"Enter the number of {denomination} notes: ")))
+
+    total_amount = calculate_total(denominations, notes)
+    print(f"Total amount available in the ATM machine: {total_amount}")
+
+if __name__ == "__main__":
+    main()
