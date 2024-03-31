@@ -1,0 +1,6 @@
+def square_area(side):
+    return side ** 2
+
+side = float(input("Enter the length of a side of the square: "))
+area = square_area(side)
+print("The area of the square with side length", side, "is:", area)
