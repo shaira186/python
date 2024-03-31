@@ -1,0 +1,7 @@
+def find_second_largest_number(lst):
+    sorted_list = sorted(lst, reverse=True)
+    return sorted_list[1]
+
+numbers = [5, 3, 8, 1, 9, 2]
+second_largest = find_second_largest_number(numbers)
+print("Second largest number:", second_largest)
