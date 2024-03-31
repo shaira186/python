@@ -1,0 +1,14 @@
+def main():
+    try:
+       
+        arr1 = list(map(int, input("Enter elements of the first array separated by space: ").split()))
+      
+        arr2 = list(map(int, input("Enter elements of the second array separated by space: ").split()))
+
+        print("First array:", arr1)
+        print("Second array:", arr2)
+    except ValueError:
+        print("Invalid input. Please enter valid positive integers.")
+
+if __name__ == "__main__":
+    main()
