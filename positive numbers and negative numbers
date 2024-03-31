@@ -1,0 +1,40 @@
+def main():
+    # Initialize variables
+    positive_sum = 0
+    positive_count = 0
+    negative_sum = 0
+    negative_count = 0
+
+    # Read numbers until -1 is encountered
+    while True:
+        num = int(input("Enter a number (-1 to stop): "))
+        
+        # Check if the number is -1 to stop
+        if num == -1:
+            break
+        
+        # Update sums and counts based on number sign
+        if num > 0:
+            positive_sum += num
+            positive_count += 1
+        elif num < 0:
+            negative_sum += num
+            negative_count += 1
+    
+    # Calculate averages
+    if positive_count > 0:
+        average_positive = positive_sum / positive_count
+    else:
+        average_positive = 0
+
+    if negative_count > 0:
+        average_negative = negative_sum / negative_count
+    else:
+        average_negative = 0
+    
+    # Print results
+    print("Average of positive numbers:", average_positive)
+    print("Average of negative numbers:", average_negative)
+
+if __name__ == "__main__":
+    main()
