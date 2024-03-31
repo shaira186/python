@@ -1,0 +1,15 @@
+
+my_list = [1, 2, 3, 4, 5]
+
+index_to_insert = 2
+element_to_insert = 10
+my_list.insert(index_to_insert, element_to_insert)
+print("After insertion:", my_list)
+
+index_to_delete = 3
+del my_list[index_to_delete]
+print("After deletion:", my_list)
+index_to_update = 1
+new_element_value = 20
+my_list[index_to_update] = new_element_value
+print("After update:", my_list)
