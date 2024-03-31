@@ -1,0 +1,15 @@
+
+my_dict = {'a': 1, 'b': 2, 'c': 1, 'd': 3, 'e': 2}
+
+values_dict = {}
+
+for key, value in my_dict.items():
+   
+    if value in values_dict:
+       
+        values_dict[value].append(key)
+    else:
+      
+        values_dict[value] = [key]
+
+print(values_dict)
