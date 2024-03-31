@@ -1,0 +1,14 @@
+from itertools import permutations
+
+def generate_permutations(input_str):
+    perms = permutations(input_str)
+    
+    perm_list = list(perms)
+    
+    perm_strings = [''.join(perm) for perm in perm_list]
+    
+    return perm_strings
+
+input_string = "abc"
+permutations_list = generate_permutations(input_string)
+print("Permutations of", input_string, ":", permutations_list)
