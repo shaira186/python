@@ -1,0 +1,26 @@
+def max_profit(jobs, workers):
+   
+    jobs.sort(key=lambda x: x[1])
+
+    workers.sort(reverse=True)
+
+    max_profit = 0
+    worker_idx = 0
+
+    for job in jobs:
+       
+        while worker_idx < len(workers) and workers[worker_idx] >= job[1]:
+            worker_idx += 1
+
+        if worker_idx == 0:
+            continue
+
+       
+        max_profit += job[2]
+        worker_idx -= 1
+
+    return max_profit
+
+jobs = [(1, 2, 100), (2, 5, 200), (3, 5, 300)]  # (job_id, difficulty, profit)
+workers = [5, 3, 2]  # Worker efficiency
+print("Max Profit:", max_profit(jobs, workers))
