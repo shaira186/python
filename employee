@@ -1,0 +1,28 @@
+def calculate_bonus(salary, grade):
+    bonus_percentage = 0
+    if grade == 'A':
+        bonus_percentage = 5
+    elif grade == 'B':
+        bonus_percentage = 10
+
+    if salary < 10000:
+        bonus_percentage += 2
+
+    bonus = (bonus_percentage / 100) * salary
+    return bonus
+
+def main():
+    salary = float(input("Enter the salary of the employee: "))
+    grade = input("Enter the grade of the employee (A/B): ").upper()
+
+    if grade not in ['A', 'B']:
+        print("Invalid grade. Please enter either 'A' or 'B'.")
+        return
+
+    bonus = calculate_bonus(salary, grade)
+    total_salary = salary + bonus
+    print(f"The bonus for the employee is: ${bonus:.2f}")
+    print(f"The total salary for the employee is: ${total_salary:.2f}")
+
+if __name__ == "__main__":
+    main()
