@@ -1,0 +1,17 @@
+def find_special_characters(s):
+    special_chars = set()
+    for char in s:
+        if not char.isalnum() and not char.isspace():
+            special_chars.add(char)
+    return special_chars
+
+def main():
+    input_string = input("Enter a string: ")
+    special_chars = find_special_characters(input_string)
+    if special_chars:
+        print("Special characters found:", special_chars)
+    else:
+        print("No special characters found.")
+
+if __name__ == "__main__":
+    main()
