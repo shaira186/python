@@ -1,0 +1,12 @@
+def concatenate_lists(lists):
+    concatenated = []
+    for lst in lists:
+        concatenated.extend(lst)
+    return concatenated
+
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+list3 = [7, 8, 9]
+
+result = concatenate_lists([list1, list2, list3])
+print("Concatenated list:", result)
