@@ -1,0 +1,25 @@
+def reverse_number(num):
+    return int(str(num)[::-1])
+
+def is_palindrome(num):
+    return str(num) == str(num)[::-1]
+
+def reverse_and_add_until_palindrome(num):
+    steps = 0
+    while not is_palindrome(num):
+        reverse = reverse_number(num)
+        num += reverse
+        steps += 1
+    return num, steps
+
+def main():
+    try:
+        num = int(input("Enter a number: "))
+        result, steps = reverse_and_add_until_palindrome(num)
+        print("Palindrome number obtained:", result)
+        print("Number of steps:", steps)
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+
+if __name__ == "__main__":
+    main()
