@@ -1,0 +1,11 @@
+def is_valid_input(s):
+
+    s_cleaned = ''.join(char.lower() for char in s if char.isalnum())
+   
+    return bool(s_cleaned)
+
+input_string = input("Enter a string: ")
+if is_valid_input(input_string):
+    print("The input string is valid for palindrome checking.")
+else:
+    print("The input string is not valid for palindrome checking.")
